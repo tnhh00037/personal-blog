@@ -1,0 +1,50 @@
+.side-bar {
+  background: #212121;
+  height:100%;
+	color: white;
+}
+
+.introduction-div{
+  /* vertical-align: middle; */
+  align-items: center;
+}
+
+.introduction-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.personal-img {
+  background-image: url('../../assets/images/self.png');
+  background-size: contain;
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  border-color: white;
+  border-width: 3px;
+  border-bottom-style: dashed;
+  margin-bottom: 15px;
+  margin-top:-150px;
+}
+
+.headlines {
+  margin-top: -20px;
+  list-style-type: none;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+a {
+  color: white
+}
+a:hover {
+  color:#ff6e40; 
+}
