@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import "./App.css";
+import { Sidebar, Header, Footer, Main, Article, AboutMe } from "./Components";
+import { Row, Col } from "react-bootstrap";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = (
+    <div className="full-size">
+        <Row>
+            <Col sm={3}>
+                <Sidebar />
+            </Col>
+            <Col sm={9}>
+                <Router>
+                    <Route path="/articles" component={Article} />
+                    <Route path="/about-me" component={AboutMe} />
+                    <Route path="/home" component={Main} />
+                </Router>
+            </Col>
+        </Row>
     </div>
-  );
-}
+);
 
 export default App;
