@@ -21,7 +21,6 @@ export default function Article(props: ArticleProp) {
     useEffect(() => {
         axios.get(`http://localhost:3030/articles/${articleId}`).then(res => {
             // TODO: handle request no article
-            console.log("received articles", res.data);
             setArticle(res.data);
         });
     }, []);
